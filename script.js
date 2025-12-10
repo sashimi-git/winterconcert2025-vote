@@ -9,6 +9,10 @@ const GROUP_LIST = ["紅組", "白組"];
 
 document.addEventListener("DOMContentLoaded", () => {
     group = undefined;
+
+    if (Cookies.get("isntFirstTime") != undefined) {
+        window.location.href = "./thanks.html";
+    }
 });
 
 const R_button = document.getElementById("R_BUTTON");
@@ -45,4 +49,24 @@ SUBMIT_button.addEventListener("click", async () => {
         body: formData,
         mode: "no-cors"
     });
+
+    Cookies.set("isntFirstTime", 1);
+
+    window.location.href = "./thanks.html";
+    
 });
+
+/*SUBMIT_button.addEventListener("click", () => {
+    const form = document.createElement("form");
+    form.action = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSexXKlsKUbE5fD6xIGduj1u-VcloIDOHdCIGseeTlnCLBZjig/formResponse";
+    form.method = "post";
+
+    const vote_group = document.createElement("input");
+    vote_group.value = GROUP_LIST[group];
+    vote_group.name = "entry.277471679";
+    vote_group.type = "hidden";
+    form.appendChild(vote_group);
+
+    document.body.appendChild(form);
+    form.submit();
+});*/
