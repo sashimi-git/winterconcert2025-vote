@@ -10,7 +10,7 @@ const GROUP_LIST = ["紅組", "白組"];
 document.addEventListener("DOMContentLoaded", () => {
     group = undefined;
 
-    if (Cookies.get("isntFirstTime") != undefined) {
+    if (Cookies.get("isntFirstTime")) {
         window.location.href = "./thanks.html";
     }
 });
@@ -50,7 +50,7 @@ SUBMIT_button.addEventListener("click", async () => {
         mode: "no-cors"
     });
 
-    Cookies.set("isntFirstTime", 1);
+    Cookies.set("isntFirstTime", true);
 
     window.location.href = "./thanks.html";
     
