@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>YGWO Winter Concert 2025</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+</head>
+
+<body>
+
+    <section class="hero is-small">
+        <div class="hero-body p-4">
+            <h1 class="title is-size-4">
+                YGWO WINTER CONCERT 2025
+            </h1>
+            <p class="subtitle is-size-5">
+                第２部 紅白特設サイト
+            </p>
+        </div>
+    </section>
+
+    <hr class="m-1">
+
+    <section class="section pt-3">
+        <div class="container is-max-tablet">
+            <div class="box is-size-7-mobile is-size-6-tablet p-3 mb-5">
+                <p>本日は、山手学院高等学校吹奏楽部 ウィンターコンサートにご来場いただき、誠にありがとうございます。</p>
+                <p>よろしければ、ぜひ第２部の投票にご参加ください！</p>
+                <br>
+                <strong>
+                    <p class="has-text-danger mb-2"><u>※投票は一人一票のみ、変更・取り消しは不可とさせていただきます。</u></p>
+                </strong>
+                <button class="js-modal-trigger button is-link" data-target="modal-description">投票方法を見る</button>
+            </div>
+
+            <div class="box">
+                <div class="columns is-mobile has-text-centered">
+                    <div class="column"><button
+                            class="button is-rounded is-size-3-mobile is-size-2-tablet is-size-1-desktop is-responsive is-danger"
+                            id="R_BUTTON">紅</button></div>
+                    <div class="column"><button
+                            class="button is-rounded is-size-3-mobile is-size-2-tablet is-size-1-desktop is-responsive"
+                            id="W_BUTTON">白</button></div>
+                </div>
+                <hr>
+                <div class="has-text-centered mb-2">
+                    <button class="js-modal-trigger button is-primary is-outlined is-large is-responsive"
+                        data-target="modal-submit" id="SUBMIT_SUB_BUTTON" disabled>投票する</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer p-2">
+        <div class="content has-text-centered">
+            <p class="m-0 has-text-weight-semibold">YGWO WINTER CONCERT 2025</p>
+            <p class="is-italic">Developed by Tomoya Nishimura</p>
+        </div>
+    </footer>
+
+    <!-- Modal Window for Description -->
+    <div id="modal-description" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head p-5">
+                <p class="modal-card-title">投票方法</p>
+            </header>
+
+            <section class="modal-card-body">
+                <ol>
+                    <li>紅組か白組どちらかのボタンをタップして選択してください。（選択されるとボタンの周りが光ります）</li>
+                    <br>
+                    <li>投票する組に間違いがないことを確認し、その下の「投票する」ボタンをタップして投票完了です。</li>
+                </ol>
+            </section>
+
+            <footer class="modal-card-foot p-3">
+                <button class="button is-link">OK</button>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Modal Window for Submit -->
+    <div id="modal-submit" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head p-5">
+                <p class="modal-card-title">投票確認</p>
+            </header>
+
+            <section class="modal-card-body">
+                <p><strong><span class="has-text-warning is-size-4 has-text-weight-bold is-underlined"
+                            id="GROUP_SPAN"></span></strong> に投票します。よろしければ「投票」ボタンをタップしてください。</p>
+            </section>
+
+            <footer class="modal-card-foot p-3">
+                <div class="buttons">
+                    <button class="button is-primary has-text-white" id="SUBMIT_BUTTON">投票</button>
+                    <button class="button is-primary is-outlined">キャンセル</button>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="modal.js"></script>
+</body>
+
+</html>
