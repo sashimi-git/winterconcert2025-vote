@@ -55,18 +55,3 @@ SUBMIT_button.addEventListener("click", async () => {
     window.location.href = "./thanks.html";
     
 });
-
-/*SUBMIT_button.addEventListener("click", () => {
-    const form = document.createElement("form");
-    form.action = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSexXKlsKUbE5fD6xIGduj1u-VcloIDOHdCIGseeTlnCLBZjig/formResponse";
-    form.method = "post";
-
-    const vote_group = document.createElement("input");
-    vote_group.value = GROUP_LIST[group];
-    vote_group.name = "entry.277471679";
-    vote_group.type = "hidden";
-    form.appendChild(vote_group);
-
-    document.body.appendChild(form);
-    form.submit();
-});*/
