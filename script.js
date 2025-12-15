@@ -7,7 +7,7 @@ variable: group
 
 const GROUP_LIST = ["紅組", "白組"];
 
-document.addEventListener("pageshow", () => {
+window.addEventListener("pageshow", () => {
     group = undefined;
 
     if (Cookies.get("isntFirstTime")) {
