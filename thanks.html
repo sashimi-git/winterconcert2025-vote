@@ -41,7 +41,13 @@
         </div>
     </footer>
     <script type="text/javascript">
-        history.pushState(null, null, null)
+        history.pushState(null, null, null);
+        $(window).on("popstate", function(e) {
+            if (!e.originalEvent.state) {
+                history.pushState(null, null, null);
+                return;
+            }
+        })
     </script>
 </body>
 
