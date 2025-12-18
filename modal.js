@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Add a keyboard event to close all modals
   document.addEventListener('keydown', (event) => {
-    if(event.key === "Escape") {
+    if (event.key === "Escape") {
       closeAllModals();
     }
   });

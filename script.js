@@ -22,7 +22,7 @@ const SUBMIT_button = document.getElementById("SUBMIT_BUTTON");
 const SUBMIT_SUB_button = document.getElementById("SUBMIT_SUB_BUTTON");
 const GROUP_span = document.getElementById("GROUP_SPAN");
 
-R_button.addEventListener("click",  () => {
+R_button.addEventListener("click", () => {
     group = 0;
     R_button.classList.add("is-focused");
     W_button.classList.remove("is-focused");
@@ -31,7 +31,7 @@ R_button.addEventListener("click",  () => {
     GROUP_span.innerText = GROUP_LIST[group];
 });
 
-W_button.addEventListener("click",  () => {
+W_button.addEventListener("click", () => {
     group = 1;
     W_button.classList.add("is-focused");
     R_button.classList.remove("is-focused");
@@ -53,5 +53,5 @@ SUBMIT_button.addEventListener("click", async () => {
     Cookies.set("isntFirstTime", true);
 
     window.location.href = "./thanks.html";
-    
+
 });
