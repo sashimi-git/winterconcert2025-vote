@@ -43,19 +43,19 @@ W_button.addEventListener("click", () => {
 SUBMIT_button.addEventListener("click", async () => {
     if (Cookies.get("isntFirstTime")) {
         window.location.href = "./thanks.html";
+    } else {
+        const formData = new FormData();
+        formData.append("entry.277471679", GROUP_LIST[group])
+
+        const response = await fetch("https://docs.google.com/forms/u/0/d/e/1FAIpQLSexXKlsKUbE5fD6xIGduj1u-VcloIDOHdCIGseeTlnCLBZjig/formResponse", {
+            method: "POST",
+            body: formData,
+            mode: "no-cors"
+        });
+
+        Cookies.set("isntFirstTime", true);
+
+        window.location.href = "./thanks.html";
     }
-
-    const formData = new FormData();
-    formData.append("entry.277471679", GROUP_LIST[group])
-
-    const response = await fetch("https://docs.google.com/forms/u/0/d/e/1FAIpQLSexXKlsKUbE5fD6xIGduj1u-VcloIDOHdCIGseeTlnCLBZjig/formResponse", {
-        method: "POST",
-        body: formData,
-        mode: "no-cors"
-    });
-
-    Cookies.set("isntFirstTime", true);
-
-    window.location.href = "./thanks.html";
 
 });
