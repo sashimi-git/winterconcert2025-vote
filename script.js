@@ -41,6 +41,10 @@ W_button.addEventListener("click", () => {
 });
 
 SUBMIT_button.addEventListener("click", async () => {
+    if (Cookies.get("isntFirstTime")) {
+        window.location.href = "./thanks.html";
+    }
+
     const formData = new FormData();
     formData.append("entry.277471679", GROUP_LIST[group])
 
