@@ -26,7 +26,6 @@ R_button.addEventListener("click", () => {
     group = 0;
     R_button.classList.add("is-focused");
     W_button.classList.remove("is-focused");
-    SUBMIT_SUB_button.disabled = false;
 
     GROUP_span.innerText = GROUP_LIST[group];
 });
@@ -35,7 +34,6 @@ W_button.addEventListener("click", () => {
     group = 1;
     W_button.classList.add("is-focused");
     R_button.classList.remove("is-focused");
-    SUBMIT_SUB_button.disabled = false;
 
     GROUP_span.innerText = GROUP_LIST[group];
 });
